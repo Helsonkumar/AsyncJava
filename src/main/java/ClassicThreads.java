@@ -13,7 +13,7 @@ public class ClassicThreads {
         System.out.println("This is inner method");
 
         //* Thread-1 is created
-        new Thread(() -> {
+        Thread th1  =  new Thread(() -> {
             int x = 3;
             try {
                 Thread.sleep(10000);
@@ -22,10 +22,15 @@ public class ClassicThreads {
             }
             System.out.println("This is Thread-1 result " + x * 2);
         }
-        ).start();
+        );
+
+        //** Setting a Thread as Deamon would let the system to kill this thread when the application is about to terminate
+        //** By default all running thread would be awaited for completion
+        th1.setDaemon(true);
+        th1.start();
 
         //** Thread-2 is created
-        new Thread(() -> {
+        Thread th2  = new Thread(() -> {
             int y = 5;
             try {
                 Thread.sleep(5000);
@@ -34,7 +39,9 @@ public class ClassicThreads {
             }
             System.out.println("This is Thread-2 result " + y * 2);
         }
-        ).start();
+        );
+        //th2.setDaemon(true);
+        th2.start();
 
         System.out.println("This is the end of inner method");
 
