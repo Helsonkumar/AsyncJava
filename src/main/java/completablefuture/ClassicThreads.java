@@ -1,3 +1,5 @@
+package completablefuture;
+
 public class ClassicThreads {
 
     public static void main(String[] args) {
