@@ -1,2 +1,4 @@
-package others;public class BlockingQueueDemo {
+package others;
+
+public class BlockingQueueDemo {
 }

@@ -29,6 +29,8 @@ public class CountDownTest {
         }
 
 
+
+
         //Awaiting for the child threads with the latch to finish or until the latch reaches 0
         try {
             latch1.await();

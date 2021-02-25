@@ -1,4 +1,4 @@
 package CountDownLatch;
 
-public class CyclicTest {
+public class CyclicBarrierDemo {
 }
